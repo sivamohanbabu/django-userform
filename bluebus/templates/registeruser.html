@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>name</label><br>
+        {{form.name}}<br>
+        <label>email</label><br>
+        {{form.email}}<br>
+        <label>password</label><br>
+        {{form.password}}<br>
+        <label>confirm password</label><br>
+        {{form.cpassword}}<br>
+        <button type="submit">Register</button>
+        <h2>
+<h2>userlist</h2>
+    {% for i in users %}
+        {{i.name}}
+        {{i.email}}
+    {%endfor %}
+
+    </form>
+
+</body>
+</html>
